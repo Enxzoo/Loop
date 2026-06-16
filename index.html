@@ -10,6 +10,98 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 </head>
+  <script>
+/* ===== LANDING PAGE BUTTON FUNCTIONS ===== */
+
+function goToPage(stateId) {
+  const target = document.getElementById(stateId);
+  if (target) {
+    target.checked = true;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
+function scrollToLandingSection(sectionClass) {
+  goToPage("state-landing");
+
+  setTimeout(() => {
+    const section = document.querySelector(sectionClass);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 80);
+}
+
+/* Make landing nav buttons work */
+document.addEventListener("DOMContentLoaded", () => {
+  const landingLinks = document.querySelectorAll(".landing-nav .nav-links a, .auth-nav .nav-links a");
+
+  landingLinks.forEach(link => {
+    const text = link.textContent.trim().toLowerCase();
+
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
+      if (text.includes("features")) {
+        scrollToLandingSection(".features");
+      }
+
+      if (text.includes("how")) {
+        scrollToLandingSection(".how-it-works");
+      }
+
+      if (text.includes("integrations")) {
+        scrollToLandingSection(".integrations");
+      }
+
+      if (text.includes("about")) {
+        scrollToLandingSection(".purpose");
+      }
+    });
+  });
+
+  /* See how it works button */
+  document.querySelectorAll(".btn-secondary").forEach(button => {
+    if (button.textContent.toLowerCase().includes("see how")) {
+      button.addEventListener("click", () => {
+        scrollToLandingSection(".how-it-works");
+      });
+    }
+  });
+
+  /* Learn more button */
+  document.querySelectorAll(".btn-cta-secondary").forEach(button => {
+    button.addEventListener("click", () => {
+      scrollToLandingSection(".features");
+    });
+  });
+
+  /* Start / Get Started buttons */
+  document.querySelectorAll(".btn-primary, .btn-getstarted-nav, .btn-cta-primary").forEach(button => {
+    const text = button.textContent.toLowerCase();
+
+    if (text.includes("start") || text.includes("get started")) {
+      button.addEventListener("click", () => {
+        goToPage("state-signup-1");
+      });
+    }
+  });
+
+  /* Login buttons */
+  document.querySelectorAll(".btn-login, .btn-login-nav").forEach(button => {
+    button.addEventListener("click", () => {
+      goToPage("state-login");
+    });
+  });
+
+  /* Home buttons */
+  document.querySelectorAll(".nav-home-link, label[for='state-landing']").forEach(button => {
+    button.addEventListener("click", () => {
+      goToPage("state-landing");
+    });
+  });
+});
+</script>
 <body>
 
   <input type="radio" name="subject-mode" id="subject-mode-import" checked />
@@ -35,10 +127,10 @@
           </label>
         </div>
         <div class="nav-links"><label for="state-landing" class="nav-home-link label-btn">Home</label>
-          <a href="#">Features</a>
-          <a href="#">How it works</a>
-          <a href="#">Integrations</a>
-          <a href="#">About</a>
+       <a href="#features">Features</a>
+       <a href="#how-it-works">How it works</a>
+       <a href="#integrations">Integrations</a>
+       <a href="#about">About</a>
         </div>
         <div class="nav-actions">
           <label for="state-login" class="btn-login label-btn">Log in</label>
