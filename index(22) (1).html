@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOOP+ · Dashboard & Auth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <style>
+    #state-dashboard:checked ~ #screen-dashboard {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="radio" name="subject-mode" id="subject-mode-import" checked />
+  <input type="radio" name="subject-mode" id="subject-mode-manual" />
+
+
+  <input type="radio" name="page-state" id="state-landing" checked />
+  <input type="radio" name="page-state" id="state-login" />
+  <input type="radio" name="page-state" id="state-signup-1" />
+  <input type="radio" name="page-state" id="state-signup-2" />
+  <input type="radio" name="page-state" id="state-signup-3" />
+  <input type="radio" name="page-state" id="state-signup-4" />
+  <input type="radio" name="page-state" id="state-dashboard" />
+
+
+  <div id="screen-landing" class="screen-container">
+    <div class="page-landing">
+      
+      <nav class="landing-nav">
+        <div class="nav-logo">
+          <label for="state-landing">
+            <img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" />
+          </label>
+        </div>
+        <div class="nav-links"><label for="state-landing" class="nav-home-link label-btn">Home</label>
+       <a href="#features">Features</a>
+       <a href="#how-it-works">How it works</a>
+       <a href="#integrations">Integrations</a>
+       <a href="#about">About</a>
+        </div>
+        <div class="nav-actions">
+          <label for="state-login" class="btn-login label-btn">Log in</label>
+          <label for="state-signup-1" class="btn-getstarted-nav label-btn">Get started free</label>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span class="hero-badge-text">Built for working students &nbsp;·&nbsp; aligned with SDG 4</span>
+        </div>
+        <h1 class="hero-headline">
+          <span class="line1">One place for every</span>
+          <span class="line2">class, task &amp; deadline.</span>
+        </h1>
+        <p class="hero-sub">
+          LOOP+ pulls together all your learning platforms into a single, glanceable dashboard.<br>
+          Stop switching tabs. Start finishing things.
+        </p>
+        <div class="hero-cta">
+          <label for="state-signup-1" class="btn-primary label-btn">Start for free &nbsp;→</label>
+          <button class="btn-secondary">See how it works</button>
+        </div>
+        <p class="hero-footnote">No credit card required &nbsp;·&nbsp; Free for students</p>
+        <div class="hero-preview">
+          <img src="https://www.figma.com/api/mcp/asset/85e1ee6a-a14b-43bd-affe-0d9828ba3263" alt="LOOP+ Dashboard Preview" />
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="integrations" id="integrations">
+        <p class="section-eyebrow">SYNCS WITH YOUR EXISTING PLATFORMS</p>
+        <div class="integration-pills">
+          <div class="integration-pill">
+            <img src="https://www.figma.com/api/mcp/asset/7108f764-ae40-4432-b5fa-5cd07294a010" alt="Silid LMS" />
+            <span>Silid LMS</span>
+          </div>
+          <div class="integration-pill">
+            <img src="https://www.figma.com/api/mcp/asset/22de1591-6eb3-478a-92f1-6cfc7d181299" alt="Google Classroom" />
+            <span>Google Classroom</span>
+          </div>
+          <div class="integration-pill">
+            <img src="https://www.figma.com/api/mcp/asset/023ec57d-d1f5-44c5-a41d-187b186abe47" alt="Google Calendar" />
+            <span>Google Calendar</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section class="features" id="features">
+        <p class="section-label">FEATURES</p>
+        <h2 class="section-title">Everything in one loop</h2>
+        <p class="section-desc">
+          Designed around how working students actually manage their time —<br>
+          not how institutions assume they do.
+        </p>
+      </section>
+
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon-wrap icon-purple">⊞</div><div class="feature-card-title">Unified dashboard</div><div class="feature-card-desc">All tasks, announcements, and deadlines from every platform in one glanceable view. No more tab-switching.</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap icon-orange">◎</div><div class="feature-card-title">Priority ranking</div><div class="feature-card-desc">Smart urgency scoring surfaces what needs your attention first. Color-coded status at a glance.</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap icon-teal">▦</div><div class="feature-card-title">Integrated schedule</div><div class="feature-card-desc">Your class schedule, work shifts, and submission deadlines side by side in one calendar.</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap icon-pink">☑</div><div class="feature-card-title">Task manager</div><div class="feature-card-desc">Create, organize, and track personal tasks alongside auto-synced assignments. Mark done and move on.</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap icon-blue">▣</div><div class="feature-card-title">Subject overview</div><div class="feature-card-desc">Per-subject cards showing upcoming requirements, class links, and completion rates.</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap icon-green">▶</div><div class="feature-card-title">Quick onboarding</div><div class="feature-card-desc">Connect your LMS accounts in under 2 minutes. LOOP+ handles the sync — you handle the studying.</div></div>
+      </div>
+
+      <section class="how-it-works" id="how-it-works">
+        <p class="section-label">HOW IT WORKS</p>
+        <h2 class="section-title">Set up in minutes</h2>
+        <div class="steps-row">
+          <div class="step"><div class="step-circle">1</div><div class="step-title">Connect your platforms</div><p class="step-desc">Link your LMS accounts. LOOP+ automatically syncs your tasks, deadlines, and schedules.</p></div>
+          <div class="step"><div class="step-circle">2</div><div class="step-title">Customize your view</div><p class="step-desc">Set your course load, work schedule, and notification preferences to match your actual life.</p></div>
+          <div class="step"><div class="step-circle">3</div><div class="step-title">Focus and finish</div><p class="step-desc">Open LOOP+ each morning to see exactly what needs attention. Check things off and move forward.</p></div>
+        </div>
+      </section>
+
+      <section class="purpose" id="about">
+        <div class="purpose-left">
+          <p class="section-label" style="margin-bottom:0;">OUR PURPOSE</p>
+          <h2 class="purpose-title">Designed around SDG 4 —<br>Quality Education</h2>
+          <p class="purpose-desc">Working students carry more than most — a job, a course load, and a life happening all at once. LOOP+ cuts out the logistical noise so your energy goes toward actually learning.</p>
+          <div class="sdg-badge">
+            <div class="sdg-num">4</div>
+            <div>
+              <div class="sdg-label-main">SDG 4 &nbsp;·&nbsp; Quality Education</div>
+              <div class="sdg-label-sub">Inclusive, equitable, lifelong learning</div>
+            </div>
+          </div>
+        </div>
+        <div class="purpose-right">
+          <div class="stat-card"><div class="stat-value">3x</div><div class="stat-desc">fewer tabs to manage your entire academic and work week</div></div>
+          <div class="stat-card"><div class="stat-value">100%</div><div class="stat-desc">free for enrolled students with a school email</div></div>
+          <div class="stat-card"><div class="stat-value">2 min</div><div class="stat-desc">average setup time from sign-up to first sync</div></div>
+          <div class="stat-card"><div class="stat-value">5+</div><div class="stat-desc">LMS and productivity platforms supported at launch</div></div>
+        </div>
+      </section>
+
+      <div class="cta-banner-wrap">
+        <div class="cta-banner">
+          <h2 class="cta-banner-title">Your semester, finally<br>under control.</h2>
+          <p class="cta-banner-sub">Join working students already using LOOP+ to cut through<br>the chaos and focus on what matters: your future.</p>
+          <div class="cta-banner-btns">
+            <label for="state-signup-1" class="btn-cta-primary label-btn">Get started for free</label>
+            <button class="btn-cta-secondary">Learn more</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-logo">
+          <img src="https://www.figma.com/api/mcp/asset/43d312e1-d534-474f-870d-fc3ca389579d" alt="LOOP+" />
+        </div>
+        <span class="footer-copy">© 2026 LOOP+. Built for students.</span>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+          <a href="#">SDG 4</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <div id="screen-login" class="screen-container">
+    <div class="page-auth page-login-exact">
+
+      <nav class="auth-nav">
+        <div class="nav-logo">
+          <label for="state-landing">
+            <img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" />
+          </label>
+        </div>
+        <div class="nav-links"><label for="state-landing" class="nav-home-link label-btn">Home</label>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="nav-actions">
+          <label for="state-login" class="btn-login-nav label-btn">Log in</label>
+          <label for="state-signup-1" class="btn-getstarted-nav label-btn">Get started free</label>
+        </div>
+      </nav>
+
+      <div class="login-exact-wrap">
+        <div class="login-exact-logo">
+          <img src="https://www.figma.com/api/mcp/asset/08d8b672-d05f-40d5-8c2c-483da4742cd0" alt="LOOP+" />
+        </div>
+
+        <div class="login-exact-card">
+          <h1 class="login-exact-title">Welcome</h1>
+
+          <div class="login-field">
+            <label>Email</label>
+            <input type="email" placeholder="doejohns@gmail.com" />
+          </div>
+
+          <div class="login-field">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••" />
+            <a class="login-forgot">Forgot Password?</a>
+          </div>
+
+          <label for="state-dashboard" class="login-signin label-btn" onclick="showDashboardHome()">Sign in</label>
+
+          <div class="login-or"><span>or</span></div>
+
+          <button class="login-social">
+            <img src="https://www.figma.com/api/mcp/asset/5a71d1c6-5f8b-4590-8210-225b305c1ea5" alt="Google" />
+            <span>Continue with google</span>
+          </button>
+
+          <button class="login-social">
+            <img src="https://www.figma.com/api/mcp/asset/dd265365-243f-427c-91d7-1ce8341a02bd" alt="Google Classroom" />
+            <span>Continue with Google Classroom</span>
+          </button>
+
+          <p class="login-create">No account? <label for="state-signup-1">Create one</label></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="screen-signup-1" class="screen-container">
+    <div class="page-auth">
+      <nav class="auth-nav">
+        <div class="nav-logo"><label for="state-landing"><img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" /></label></div>
+        <div class="nav-links"><label for="state-landing" class="nav-home-link label-btn">Home</label><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#integrations">Integrations</a><a href="#about">About</a></div>
+        <div class="nav-actions"><label for="state-login" class="btn-login-nav label-btn">Log in</label><label for="state-signup-1" class="btn-getstarted-nav label-btn">Get started free</label></div>
+      </nav>
+
+      <div class="screens-container">
+        <div class="auth-card-wide">
+          <div class="step-progress">
+            <div class="step-track">
+              <div class="step-circle active" id="s1-c1"><span>1</span></div><div class="step-connector"></div>
+              <div class="step-circle pending" id="s1-c2"><span>2</span></div><div class="step-connector"></div>
+              <div class="step-circle pending" id="s1-c3"><span>3</span></div><div class="step-connector"></div>
+              <div class="step-circle pending" id="s1-c4"><span>4</span></div>
+            </div>
+            <div class="step-labels-row">
+              <div class="step-label-slot active">Account</div><div class="step-spacer"></div>
+              <div class="step-label-slot pending">Profile</div><div class="step-spacer"></div>
+              <div class="step-label-slot pending">Subjects</div><div class="step-spacer"></div>
+              <div class="step-label-slot pending">Alerts</div>
+            </div>
+          </div>
+
+          <h2 class="signup-title">Create your account</h2>
+
+          <div class="form-row">
+            <div class="field-group"><label class="field-label">First Name</label><input class="field-input-sm" type="text" placeholder="John" /></div>
+            <div class="field-group"><label class="field-label">Last Name</label><input class="field-input-sm" type="text" placeholder="Doe" /></div>
+          </div>
+          <div class="field-group"><label class="field-label">School / University</label><input class="field-input-sm" type="text" placeholder="Cebu Doctors University" /></div>
+          <div class="field-group"><label class="field-label">Program / Course</label><input class="field-input-sm" type="text" placeholder="Bachelor of Science in Nursing" /></div>
+          <div class="field-group">
+            <label class="field-label">Year Level</label>
+            <select class="field-select">
+              <option value="" disabled selected>Select year level</option>
+              <option>First Year</option>
+              <option>Second Year</option>
+              <option>Third Year</option>
+              <option>Fourth Year</option>
+            </select>
+          </div>
+
+          <div class="btn-row">
+            <label for="state-signup-2" class="btn-continue label-btn">Create Account &nbsp;→</label>
+          </div>
+          <p class="auth-footer-link">Already have an account? <label for="state-login">Log in</label></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="screen-signup-2" class="screen-container">
+    <div class="page-auth">
+      <nav class="auth-nav">
+        <div class="nav-logo"><label for="state-landing"><img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" /></label></div>
+        <div class="nav-links"><label for="state-landing" class="nav-home-link label-btn">Home</label><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#integrations">Integrations</a><a href="#about">About</a></div>
+        <div class="nav-actions"><label for="state-login" class="btn-login-nav label-btn">Log in</label><label for="state-signup-1" class="btn-getstarted-nav label-btn">Get started free</label></div>
+      </nav>
+
+      <div class="screens-container">
+        <div class="auth-card-wide">
+          <div class="step-progress">
+            <div class="step-track">
+              <div class="step-circle done"><span>1</span></div><div class="step-connector"></div>
+              <div class="step-circle active"><span>2</span></div><div class="step-connector"></div>
+              <div class="step-circle pending"><span>3</span></div><div class="step-connector"></div>
+              <div class="step-circle pending"><span>4</span></div>
+            </div>
+            <div class="step-labels-row">
+              <div class="step-label-slot done">Account</div><div class="step-spacer"></div>
+              <div class="step-label-slot active">Profile</div><div class="step-spacer"></div>
+              <div class="step-label-slot pending">Subjects</div><div class="step-spacer"></div>
+              <div class="step-label-slot pending">Alerts</div>
+            </div>
+          </div>
+
+          <h2 class="signup-title">Set up your Account</h2>
+
+          <div class="field-group"><label class="field-label">Enter your email</label><input class="field-input-sm" type="email" placeholder="doejohns@gmail.com" /></div>
+          <div class="form-row">
+            <div class="field-group"><label class="field-label">Password</label><input class="field-input-sm" type="password" placeholder="••••••••" /></div>
+            <div class="field-group"><label class="field-label">Confirm Password</label><input class="field-input-sm" type="password" placeholder="••••••••" /></div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">I am a</label>
+            <div class="role-selector">
+              <div class="role-card selected" onclick="selectRole(this)">
+                <span class="role-icon">📖</span><span class="role-name">Student</span><span class="role-sub">Track my tasks</span>
+              </div>
+              <div class="role-card" onclick="selectRole(this)">
+                <span class="role-icon">💼</span><span class="role-name">Working Student</span><span class="role-sub">Juggling work + school</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="avatar-section">
+            <label class="avatar-label">Avatar Color</label>
+            <div class="avatar-row">
+              <div class="avatar-preview" id="avatar-preview">JD</div>
+              <div class="color-dot selected" style="background:#7c3aed;" onclick="pickColor(this, '#7c3aed')"></div>
+              <div class="color-dot" style="background:#db2777;" onclick="pickColor(this, '#db2777')"></div>
+              <div class="color-dot" style="background:#0891b2;" onclick="pickColor(this, '#0891b2')"></div>
+              <div class="color-dot" style="background:#059669;" onclick="pickColor(this, '#059669')"></div>
+              <div class="color-dot" style="background:#d97706;" onclick="pickColor(this, '#d97706')"></div>
+              <div class="color-dot" style="background:#dc2626;" onclick="pickColor(this, '#dc2626')"></div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <label for="state-signup-1" class="btn-back label-btn">← Back</label>
+            <label for="state-signup-3" class="btn-continue label-btn">Continue &nbsp;→</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="screen-signup-3" class="screen-container">
+    <div class="page-auth">
+      <nav class="auth-nav">
+        <div class="nav-logo"><label for="state-landing"><img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" /></label></div>
+        <div class="nav-links">
+          <label for="state-landing" class="nav-home-link label-btn">Home</label>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="nav-actions">
+          <label for="state-login" class="btn-login-nav label-btn">Log in</label>
+          <label for="state-signup-1" class="btn-getstarted-nav label-btn">Get started free</label>
+        </div>
+      </nav>
+
+      <div class="screens-container">
+        <div class="auth-card-wide subject-step-card">
+          <div class="step-progress">
+            <div class="step-track">
+              <div class="step-circle done"><span>1</span></div><div class="step-connector"></div>
+              <div class="step-circle done"><span>2</span></div><div class="step-connector"></div>
+              <div class="step-circle active"><span>3</span></div><div class="step-connector"></div>
+              <div class="step-circle pending"><span>4</span></div>
+            </div>
+            <div class="step-labels-row">
+              <div class="step-label-slot done">Account</div><div class="step-spacer"></div>
+              <div class="step-label-slot done">Profile</div><div class="step-spacer"></div>
+              <div class="step-label-slot active">Subjects</div><div class="step-spacer"></div>
+              <div class="step-label-slot pending">Alerts</div>
+            </div>
+          </div>
+
+          <div class="subject-step-shell">
+            <h2 class="subject-step-title">Add your subjects</h2>
+
+            <div class="subject-mode-switch">
+              <label for="subject-mode-import" class="subject-mode-btn import-btn">
+                <i class="ti ti-download"></i>
+                <span>Import from<br>platform</span>
+              </label>
+              <label for="subject-mode-manual" class="subject-mode-btn manual-btn">
+                <i class="ti ti-pencil"></i>
+                <span>Add manually</span>
+              </label>
+            </div>
+
+            <div class="subject-pane subject-pane-import">
+              <div class="platform-list">
+                <div class="platform-item">
+                  <div class="platform-icon silid">S</div>
+                  <div class="platform-info">
+                    <strong>Silid LMS</strong>
+                    <p>Import your class subjects automatically</p>
+                  </div>
+                  <span class="platform-status imported">Imported</span>
+                </div>
+
+                <div class="platform-item">
+                  <div class="platform-icon classroom">G</div>
+                  <div class="platform-info">
+                    <strong>Google Classroom</strong>
+                    <p>Google account on your subjects</p>
+                  </div>
+                  <span class="platform-status imported">Imported</span>
+                </div>
+
+                <div class="platform-item">
+                  <div class="platform-icon calendar">C</div>
+                  <div class="platform-info">
+                    <strong>Google Calendar</strong>
+                    <p>Sync your subjects and deadlines</p>
+                  </div>
+                  <span class="platform-status connect">Connect</span>
+                </div>
+              </div>
+
+              <p class="subject-helper-text">
+                Imported subjects are synced automatically.<br>
+                You can edit them anytime in Settings.
+              </p>
+
+              <div class="subject-chip-list">
+                <div class="subject-chip">
+                  <span class="chip-dot red"></span>
+                  <span class="chip-name">Nursing Fundamentals</span>
+                  <span class="chip-source">Silid LMS</span>
+                  <button type="button" class="chip-close">×</button>
+                </div>
+                <div class="subject-chip">
+                  <span class="chip-dot amber"></span>
+                  <span class="chip-name">Pharmacology</span>
+                  <span class="chip-source">Silid LMS</span>
+                  <button type="button" class="chip-close">×</button>
+                </div>
+                <div class="subject-chip">
+                  <span class="chip-dot green"></span>
+                  <span class="chip-name">Anatomy and Physiology</span>
+                  <span class="chip-source">Silid LMS</span>
+                  <button type="button" class="chip-close">×</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="subject-pane subject-pane-manual">
+              <div class="manual-selected-chip">
+                <span class="chip-dot purple"></span>
+                <span class="chip-name">Community Health Nursing</span>
+                <span class="chip-source">Manual</span>
+                <button type="button" class="chip-close">×</button>
+              </div>
+
+              <div class="subject-manual-form">
+                <div class="field-group">
+                  <label class="field-label">Subject Name</label>
+                  <input class="field-input-sm" type="text" placeholder="" />
+                </div>
+
+                <div class="manual-two-col">
+                  <div class="field-group">
+                    <label class="field-label">Schedule</label>
+                    <input class="field-input-sm" type="text" placeholder="" />
+                  </div>
+                  <div class="field-group">
+                    <label class="field-label">Units</label>
+                    <input class="field-input-sm" type="text" placeholder="" />
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label">Instructor</label>
+                  <input class="field-input-sm" type="text" placeholder="" />
+                </div>
+
+                <button type="button" class="subject-add-btn">+ Add Subject</button>
+              </div>
+            </div>
+
+            <div class="subject-step-actions">
+              <label for="state-signup-2" class="subject-back-btn label-btn">← Back</label>
+              <label for="state-signup-4" class="btn-continue label-btn">Continue →</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="screen-signup-4" class="screen-container">
+    <div class="page-auth">
+      <nav class="auth-nav">
+        <div class="nav-logo"><label for="state-landing"><img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" /></label></div>
+        <div class="nav-links"><label for="state-landing" class="nav-home-link label-btn">Home</label><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#integrations">Integrations</a><a href="#about">About</a></div>
+        <div class="nav-actions"><label for="state-login" class="btn-login-nav label-btn">Log in</label><label for="state-signup-1" class="btn-getstarted-nav label-btn">Get started free</label></div>
+      </nav>
+
+      <div class="screens-container">
+        <div class="auth-card-wide">
+          <div class="step-progress">
+            <div class="step-track">
+              <div class="step-circle done"><span>1</span></div><div class="step-connector"></div>
+              <div class="step-circle done"><span>2</span></div><div class="step-connector"></div>
+              <div class="step-circle done"><span>3</span></div><div class="step-connector"></div>
+              <div class="step-circle active"><span>4</span></div>
+            </div>
+            <div class="step-labels-row">
+              <div class="step-label-slot done">Account</div><div class="step-spacer"></div>
+              <div class="step-label-slot done">Profile</div><div class="step-spacer"></div>
+              <div class="step-label-slot done">Subjects</div><div class="step-spacer"></div>
+              <div class="step-label-slot active">Alerts</div>
+            </div>
+          </div>
+
+          <h2 class="signup-title">Set up your alerts</h2>
+
+          <div class="alert-toggle-row">
+            <div class="alert-toggle-info"><div class="alert-toggle-title">🔔 Assignment Reminders</div><div class="alert-toggle-desc">Receive notifications for upcoming tasks</div></div>
+            <div class="toggle" onclick="toggleSwitch(this)"></div>
+          </div>
+          <div class="alert-toggle-row">
+            <div class="alert-toggle-info"><div class="alert-toggle-title">📚 Class Reminders</div><div class="alert-toggle-desc">Get notified before scheduled classes</div></div>
+            <div class="toggle" onclick="toggleSwitch(this)"></div>
+          </div>
+          <div class="alert-toggle-row">
+            <div class="alert-toggle-info"><div class="alert-toggle-title">⏰ Deadline Alerts</div><div class="alert-toggle-desc">Never miss important submissions</div></div>
+            <div class="toggle" onclick="toggleSwitch(this)"></div>
+          </div>
+
+          <div class="timing-section">
+            <p class="timing-label">Reminder Timing</p>
+            <select class="timing-select">
+              <option>15 Minutes Before</option>
+              <option>30 Minutes Before</option>
+              <option>1 Hour Before</option>
+              <option>1 Day Before</option>
+            </select>
+          </div>
+
+          <div class="btn-row">
+            <label for="state-signup-3" class="btn-back label-btn">← Back</label>
+            <label for="state-dashboard" class="btn-complete label-btn" onclick="showDashboardHome()">Complete Setup &nbsp;→</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectRole(card) {
+      card.closest('.role-selector').querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+    }
+    function pickColor(dot, color) {
+      dot.closest('.avatar-row').querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+      dot.classList.add('selected');
+      document.getElementById('avatar-preview').style.background = color;
+    }
+    function toggleSwitch(el) { el.classList.toggle('off'); }
+    function switchImportTab(tab) {
+      tab.closest('.import-tabs').querySelectorAll('.import-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    }
+  </script>
+
+  <div id="screen-dashboard" class="screen-container">
+    <div class="dashboard-screen">
+
+<div class="app">
+<div class="bg-glow"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-pill">
+    <div class="dash-logo"><label for="state-landing"><img src="https://www.figma.com/api/mcp/asset/b57d237c-45e3-42c2-a3d4-e2d579239f41" alt="LOOP+" /></label></div>
+    <div class="nav-links">
+      <div class="nl active" id="nl-home" onclick="switchTab('home')"><i class="ti ti-home"></i> Home</div>
+      <div class="nl" id="nl-tasks" onclick="switchTab('tasks')"><i class="ti ti-checklist"></i> Tasks</div>
+      <div class="nl" id="nl-sched" onclick="switchTab('sched')"><i class="ti ti-calendar"></i> Schedule</div>
+      <div class="nl" id="nl-subj" onclick="switchTab('subj')"><i class="ti ti-books"></i> Subjects</div>
+    </div>
+    <div class="nav-search"><i class="ti ti-search" style="font-size:12px"></i><input id="dashboardSearch" type="search" placeholder="Search..." oninput="dashboardSearchFilter(this.value)" /></div>
+    <div class="nav-r">
+      <div class="bell" onclick="toggleDashMenu('notif-menu')">
+        <i class="ti ti-bell"></i>
+        <div class="bell-dot"></div>
+      </div>
+
+      <div class="dash-dropdown notif-menu" id="notif-menu">
+        <div class="dash-menu-head">
+          <strong>Notifications</strong>
+          <span>3 new</span>
+        </div>
+        <div class="notif-item urgent">
+          <div class="notif-icon"><i class="ti ti-alert-circle"></i></div>
+          <div>
+            <strong>Nursing Notes overdue</strong>
+            <p>Due tonight at 11:59 PM</p>
+          </div>
+        </div>
+        <div class="notif-item">
+          <div class="notif-icon purple"><i class="ti ti-calendar"></i></div>
+          <div>
+            <strong>Duty starts at 2:00 PM</strong>
+            <p>Hospital Duty - Ward 3</p>
+          </div>
+        </div>
+        <div class="notif-item success">
+          <div class="notif-icon green"><i class="ti ti-check"></i></div>
+          <div>
+            <strong>Quiz submitted</strong>
+            <p>Patient Assessment Quiz</p>
+          </div>
+        </div>
+        <button class="dash-menu-btn">View all notifications</button>
+      </div>
+
+      <div class="avatar" onclick="toggleDashMenu('profile-menu')">JD</div>
+
+      <div class="dash-dropdown profile-menu" id="profile-menu">
+        <div class="profile-mini">
+          <div class="profile-avatar-lg">JD</div>
+          <div>
+            <strong>John Doe</strong>
+            <p>Bachelor of Science in Nursing</p>
+          </div>
+        </div>
+        <div class="profile-info-row"><span>School</span><strong>Cebu Doctors University</strong></div>
+        <div class="profile-info-row"><span>Year Level</span><strong>2nd Year</strong></div>
+        <div class="profile-info-row"><span>Email</span><strong>doejohns@gmail.com</strong></div>
+        <div class="profile-actions">
+          <button>Edit Profile</button>
+          <button>Settings</button>
+        </div>
+        <label for="state-login" class="dash-logout label-btn">Log out</label>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+
+<!-- ================================================================
+     DASHBOARD HOME PAGE
+     ================================================================ -->
+<div class="page on" id="page-home">
+  <div class="dash-home-head">
+    <div>
+      <h1>Good Evening, John</h1>
+      <p>Tuesday · June 9</p>
+    </div>
+    <div class="dash-time"><i class="ti ti-clock"></i> 10:48 pm</div>
+  </div>
+
+  <div class="home-grid">
+    <div class="home-left">
+      <div class="home-card priority-card">
+        <div class="home-card-title"><i class="ti ti-activity"></i> Priority Task</div>
+
+        <div class="priority-row">
+          <div class="priority-check"></div>
+          <div class="priority-info">
+            <div class="priority-name">Submit Nursing Notes - Wound Care</div>
+            <div class="priority-meta">Due 11:59 PM · Tonight</div>
+          </div>
+          <span class="badge b-red">• Overdue</span>
+          <span class="source-pill">Silid LMS</span>
+        </div>
+
+        <div class="priority-row">
+          <div class="priority-check"></div>
+          <div class="priority-info">
+            <div class="priority-name">Concept Map - Pharmacology a...</div>
+            <div class="priority-meta">Due 11:59 PM · Tonight</div>
+          </div>
+          <span class="badge b-red">• Overdue</span>
+          <span class="source-pill">Google Classroom</span>
+        </div>
+
+        <div class="priority-row">
+          <div class="priority-check"></div>
+          <div class="priority-info">
+            <div class="priority-name">Reflection Paper - Hospital Duty D...</div>
+            <div class="priority-meta">Due Tomorrow · 8:00 AM</div>
+          </div>
+          <span class="badge b-amber">• Due Soon</span>
+          <span class="source-pill">Silid LMS</span>
+        </div>
+
+        <div class="priority-row submitted">
+          <div class="priority-check done"><i class="ti ti-check"></i></div>
+          <div class="priority-info">
+            <div class="priority-name done-text">Patient Assessment Quiz</div>
+            <div class="priority-meta">Submitted · 2:30 PM</div>
+          </div>
+          <span class="badge b-green">• Submitted</span>
+          <span class="source-pill">Google Classroom</span>
+        </div>
+      </div>
+
+      <div class="home-card schedule-card">
+        <div class="home-card-title"><i class="ti ti-clock"></i> Today’s Schedule</div>
+
+        <div class="schedule-home-row purple">
+          <span class="schedule-time">7:00 AM</span>
+          <strong>Nursing Class - NCM 112</strong>
+          <span class="schedule-tag">Silid LMS</span>
+        </div>
+
+        <div class="schedule-home-row green">
+          <span class="schedule-time">12:00 PM</span>
+          <strong>Pharmacology Lecture</strong>
+          <span class="schedule-tag gc">Google Classroom</span>
+        </div>
+
+        <div class="schedule-home-row orange">
+          <span class="schedule-time">2:00 PM</span>
+          <strong>Hospital Duty - Ward 3 (5 hours)</strong>
+          <span class="schedule-tag duty">Duty</span>
+        </div>
+
+        <div class="schedule-home-row red">
+          <span class="schedule-time">11:59 PM</span>
+          <strong>Deadline - Nursing Notes and Concept Map</strong>
+          <span class="schedule-tag critical">Critical</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-right">
+      <div class="home-card glance-card">
+        <div class="home-card-title"><i class="ti ti-chart-bar"></i> Today at a Glance</div>
+
+        <div class="glance-grid">
+          <div><strong class="red-num">2</strong><span>Overdue</span></div>
+          <div><strong class="amber-num">3</strong><span>Due Tonight</span></div>
+          <div><strong class="green-num">4</strong><span>Submitted</span></div>
+          <div><strong class="purple-num">7</strong><span>Total Task</span></div>
+        </div>
+
+        <div class="completion-label">Completion rate</div>
+        <div class="completion-track"><div class="completion-fill"></div></div>
+        <div class="completion-text">57 % this week</div>
+      </div>
+
+      <div class="home-card progress-card">
+        <div class="home-card-title"><i class="ti ti-progress"></i> Subject Progress</div>
+
+        <div class="progress-item">
+          <div><span>Nursing Class - NCM 112</span><b>78%</b></div>
+          <div class="progress-track"><span style="width:78%"></span></div>
+        </div>
+        <div class="progress-item">
+          <div><span>Pharmacology</span><b>52%</b></div>
+          <div class="progress-track amber"><span style="width:52%"></span></div>
+        </div>
+        <div class="progress-item">
+          <div><span>Anatomy and Physiology</span><b>91%</b></div>
+          <div class="progress-track green"><span style="width:91%"></span></div>
+        </div>
+        <div class="progress-item">
+          <div><span>Community Health</span><b>34%</b></div>
+          <div class="progress-track red"><span style="width:34%"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-card feed-card">
+    <div class="home-card-title"><i class="ti ti-news"></i> Feed</div>
+    <div class="feed-tabs">
+      <span class="active">All</span>
+      <span>Silid LMS</span>
+      <span>Google Classroom</span>
+      <span>Announcements</span>
+    </div>
+
+    <div class="feed-grid">
+      <div class="feed-item">
+        <div><span class="source-mini">Silid LMS</span><span class="badge b-red">• Overdue</span></div>
+        <h3>Nursing Notes - Wound Care Assessment</h3>
+        <p>NCM 112 · Due 11:59 PM Tonight</p>
+      </div>
+      <div class="feed-item">
+        <div><span class="source-mini gc">Google Classroom</span><span class="badge b-red">• Overdue</span></div>
+        <h3>Concept Map - Pharmacology Unit 4</h3>
+        <p>Pharmacology · Due 11:59 PM Tonight</p>
+      </div>
+      <div class="feed-item">
+        <div><span class="source-mini">Silid LMS</span><span class="badge b-red">• Overdue</span></div>
+        <h3>Reflection Paper - Pharmacology Duty Day 3</h3>
+        <p>NCM 112 · Due 8:00 AM Tomorrow</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================================
+     TASKS PAGE
+     ================================================================ -->
+<div class="page" id="page-tasks">
+  <div class="page-header">
+    <div class="ph-left">
+      <h2>Tasks</h2>
+      <p>Aggregated from Silid LMS &amp; Google Classroom · June 9, 2026</p>
+    </div>
+    <div class="ph-right">
+      <div class="btn"><i class="ti ti-adjustments-horizontal" style="font-size:13px"></i> Filter</div>
+      <div class="btn"><i class="ti ti-sort-descending" style="font-size:13px"></i> Sort</div>
+      <div class="btn btn-primary"><i class="ti ti-plus" style="font-size:13px"></i> Add Task</div>
+    </div>
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="tasks-stats-row">
+    <div class="tstat"><div class="tstat-num" style="color:#f87171">2</div><div class="tstat-lbl">Overdue</div></div>
+    <div class="tstat"><div class="tstat-num" style="color:#fbbf24">3</div><div class="tstat-lbl">Due Tonight</div></div>
+    <div class="tstat"><div class="tstat-num" style="color:#a78bfa">2</div><div class="tstat-lbl">In Progress</div></div>
+    <div class="tstat"><div class="tstat-num" style="color:#4ade80">4</div><div class="tstat-lbl">Submitted</div></div>
+  </div>
+
+  <div class="tasks-layout">
+    <!-- SIDEBAR FILTERS -->
+    <div class="tasks-sidebar">
+      <div class="filter-card">
+        <div class="filter-title"><i class="ti ti-filter"></i> Status</div>
+        <div class="filter-item on" onclick="filterTasks('all',this)">
+          <div class="fi-left"><i class="ti ti-layout-list"></i><span class="fi-label">All Tasks</span></div>
+          <span class="fi-count">11</span>
+        </div>
+        <div class="filter-item" onclick="filterTasks('overdue',this)">
+          <div class="fi-left"><i class="ti ti-alert-circle" style="color:#f87171"></i><span class="fi-label">Overdue</span></div>
+          <span class="fi-count red">2</span>
+        </div>
+        <div class="filter-item" onclick="filterTasks('due-soon',this)">
+          <div class="fi-left"><i class="ti ti-clock" style="color:#fbbf24"></i><span class="fi-label">Due Soon</span></div>
+          <span class="fi-count">3</span>
+        </div>
+        <div class="filter-item" onclick="filterTasks('in-progress',this)">
+          <div class="fi-left"><i class="ti ti-loader" style="color:#a78bfa"></i><span class="fi-label">In Progress</span></div>
+          <span class="fi-count">2</span>
+        </div>
+        <div class="filter-item" onclick="filterTasks('submitted',this)">
+          <div class="fi-left"><i class="ti ti-circle-check" style="color:#4ade80"></i><span class="fi-label">Submitted</span></div>
+          <span class="fi-count">4</span>
+        </div>
+      </div>
+      <div class="filter-card">
+        <div class="filter-title"><i class="ti ti-plug"></i> Source</div>
+        <div class="filter-item on">
+          <div class="fi-left"><i class="ti ti-stack"></i><span class="fi-label">All Sources</span></div>
+        </div>
+        <div class="filter-item">
+          <div class="fi-left"><i class="ti ti-school" style="color:#a78bfa"></i><span class="fi-label">Silid LMS</span></div>
+          <span class="fi-count">6</span>
+        </div>
+        <div class="filter-item">
+          <div class="fi-left"><i class="ti ti-brand-google" style="color:#4ade80"></i><span class="fi-label">Google Classroom</span></div>
+          <span class="fi-count">5</span>
+        </div>
+      </div>
+      <div class="filter-card">
+        <div class="filter-title"><i class="ti ti-books"></i> Subject</div>
+        <div class="filter-item"><div class="fi-left"><span class="fi-label">NCM 112</span></div></div>
+        <div class="filter-item"><div class="fi-left"><span class="fi-label">Pharmacology</span></div></div>
+        <div class="filter-item"><div class="fi-left"><span class="fi-label">Anatomy &amp; Physiology</span></div></div>
+        <div class="filter-item"><div class="fi-left"><span class="fi-label">Community Health</span></div></div>
+      </div>
+    </div>
+
+    <!-- TASK LIST -->
+    <div class="tasks-main" id="task-list">
+      <div class="task-group-label" data-group="overdue">🔴 Overdue</div>
+      <div class="task-row overdue" data-status="overdue">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Submit Nursing Notes — Wound Care Assessment</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due 11:59 PM · June 9</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> NCM 112</span>
+            <span class="t-meta-item"><i class="ti ti-file-text"></i> Written Report</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-red"><span class="dot"></span> Overdue</span>
+          <span class="source-tag st-silid">Silid LMS</span>
+          <span class="t-priority prio-high"><i class="ti ti-flame" style="font-size:11px"></i> High</span>
+        </div>
+      </div>
+      <div class="task-row overdue" data-status="overdue">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Concept Map — Pharmacology Unit 4</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due 11:59 PM · June 9</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Pharmacology</span>
+            <span class="t-meta-item"><i class="ti ti-vector" style="font-size:11px"></i> Concept Map</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-red"><span class="dot"></span> Overdue</span>
+          <span class="source-tag st-gc">Google Classroom</span>
+          <span class="t-priority prio-high"><i class="ti ti-flame" style="font-size:11px"></i> High</span>
+        </div>
+      </div>
+
+      <div class="task-group-label" data-group="due-soon">🟡 Due Soon</div>
+      <div class="task-row due-soon" data-status="due-soon">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Reflection Paper — Hospital Duty Day 3</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due Tomorrow · 8:00 AM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> NCM 112</span>
+            <span class="t-meta-item"><i class="ti ti-file-text"></i> Essay</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-amber"><span class="dot"></span> Due Soon</span>
+          <span class="source-tag st-silid">Silid LMS</span>
+          <span class="t-priority prio-med"><i class="ti ti-arrow-up" style="font-size:11px"></i> Medium</span>
+        </div>
+      </div>
+      <div class="task-row due-soon" data-status="due-soon">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Drug Study — Amoxicillin &amp; Metformin</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due Jun 11 · 11:59 PM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Pharmacology</span>
+            <span class="t-meta-item"><i class="ti ti-file-text"></i> Research</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-amber"><span class="dot"></span> Due Soon</span>
+          <span class="source-tag st-gc">Google Classroom</span>
+          <span class="t-priority prio-med"><i class="ti ti-arrow-up" style="font-size:11px"></i> Medium</span>
+        </div>
+      </div>
+      <div class="task-row due-soon" data-status="due-soon">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Community Diagnosis — Brgy. Labangon Survey</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due Jun 12 · 5:00 PM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Community Health</span>
+            <span class="t-meta-item"><i class="ti ti-chart-bar" style="font-size:11px"></i> Group Output</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-amber"><span class="dot"></span> Due Soon</span>
+          <span class="source-tag st-silid">Silid LMS</span>
+          <span class="t-priority prio-med"><i class="ti ti-arrow-up" style="font-size:11px"></i> Medium</span>
+        </div>
+      </div>
+
+      <div class="task-group-label" data-group="in-progress">🟣 In Progress</div>
+      <div class="task-row in-progress" data-status="in-progress">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Case Study — Hypertensive Patient (Mr. Santos)</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due Jun 15 · 11:59 PM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> NCM 112</span>
+            <span class="t-meta-item"><i class="ti ti-progress" style="font-size:11px"></i> 60% done</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-purple"><span class="dot"></span> In Progress</span>
+          <span class="source-tag st-silid">Silid LMS</span>
+          <span class="t-priority prio-low"><i class="ti ti-minus" style="font-size:11px"></i> Low</span>
+        </div>
+      </div>
+      <div class="task-row in-progress" data-status="in-progress">
+        <div class="t-check"></div>
+        <div class="t-body">
+          <div class="t-name">Lab Report — Body System Analysis (A&amp;P)</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-clock"></i> Due Jun 16 · 8:00 AM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Anatomy &amp; Physiology</span>
+            <span class="t-meta-item"><i class="ti ti-progress" style="font-size:11px"></i> 35% done</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-purple"><span class="dot"></span> In Progress</span>
+          <span class="source-tag st-gc">Google Classroom</span>
+          <span class="t-priority prio-low"><i class="ti ti-minus" style="font-size:11px"></i> Low</span>
+        </div>
+      </div>
+
+      <div class="task-group-label" data-group="submitted">✅ Submitted</div>
+      <div class="task-row submitted" data-status="submitted">
+        <div class="t-check done"></div>
+        <div class="t-body">
+          <div class="t-name striked">Patient Assessment Quiz — Week 3</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-circle-check" style="color:#4ade80"></i> Submitted Jun 9 · 2:30 PM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> NCM 112</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-green"><span class="dot"></span> Submitted</span>
+          <span class="source-tag st-gc">Google Classroom</span>
+        </div>
+      </div>
+      <div class="task-row submitted" data-status="submitted">
+        <div class="t-check done"></div>
+        <div class="t-body">
+          <div class="t-name striked">Health Teaching Plan — Diabetes Prevention</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-circle-check" style="color:#4ade80"></i> Submitted Jun 8 · 10:15 PM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Community Health</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-green"><span class="dot"></span> Submitted</span>
+          <span class="source-tag st-silid">Silid LMS</span>
+        </div>
+      </div>
+      <div class="task-row submitted" data-status="submitted">
+        <div class="t-check done"></div>
+        <div class="t-body">
+          <div class="t-name striked">Medication Computation Quiz</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-circle-check" style="color:#4ade80"></i> Submitted Jun 7 · 11:50 PM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Pharmacology</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-green"><span class="dot"></span> Submitted</span>
+          <span class="source-tag st-gc">Google Classroom</span>
+        </div>
+      </div>
+      <div class="task-row submitted" data-status="submitted">
+        <div class="t-check done"></div>
+        <div class="t-body">
+          <div class="t-name striked">Skeletal System Diagram — Lab Exercise 2</div>
+          <div class="t-meta">
+            <span class="t-meta-item"><i class="ti ti-circle-check" style="color:#4ade80"></i> Submitted Jun 6 · 9:00 AM</span>
+            <span class="t-meta-item"><i class="ti ti-books"></i> Anatomy &amp; Physiology</span>
+          </div>
+        </div>
+        <div class="t-right">
+          <span class="badge b-green"><span class="dot"></span> Submitted</span>
+          <span class="source-tag st-gc">Google Classroom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     SCHEDULE PAGE
+     ================================================================ -->
+<div class="page" id="page-sched">
+  <div class="page-header">
+    <div class="ph-left">
+      <h2>Schedule</h2>
+      <p>Week of June 9–15, 2026 · Classes + Duties + Deadlines</p>
+    </div>
+    <div class="ph-right">
+      <div class="btn"><i class="ti ti-list" style="font-size:13px"></i> List View</div>
+      <div class="btn btn-primary"><i class="ti ti-plus" style="font-size:13px"></i> Add Event</div>
+    </div>
+  </div>
+
+  <div class="sched-layout">
+    <div>
+      <!-- WEEK NAV -->
+      <div class="week-nav">
+        <div class="mc-arrow">‹</div>
+        <div class="week-nav-title">Week of June 9 – 15, 2026</div>
+        <div class="mc-arrow">›</div>
+      </div>
+      <!-- WEEK DAYS -->
+      <div class="week-days">
+        <div class="wday today">
+          <div class="wday-name">Mon</div>
+          <div class="wday-num">9</div>
+          <div class="wday-dot" style="background:#7c3aed"></div>
+        </div>
+        <div class="wday">
+          <div class="wday-name">Tue</div>
+          <div class="wday-num">10</div>
+          <div class="wday-dot" style="background:#fb923c"></div>
+        </div>
+        <div class="wday">
+          <div class="wday-name">Wed</div>
+          <div class="wday-num">11</div>
+          <div class="wday-dot" style="background:#7c3aed"></div>
+        </div>
+        <div class="wday">
+          <div class="wday-name">Thu</div>
+          <div class="wday-num">12</div>
+          <div class="wday-dot" style="background:#fb923c"></div>
+        </div>
+        <div class="wday">
+          <div class="wday-name">Fri</div>
+          <div class="wday-num">13</div>
+          <div class="wday-dot" style="background:#7c3aed"></div>
+        </div>
+        <div class="wday">
+          <div class="wday-name">Sat</div>
+          <div class="wday-num">14</div>
+          <div class="wday-dot" style="background:#f87171"></div>
+        </div>
+        <div class="wday">
+          <div class="wday-name">Sun</div>
+          <div class="wday-num">15</div>
+          <div class="wday-dot" style="background:rgba(255,255,255,0)"></div>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="card card-p" style="background:rgba(255,255,255,.04)">
+        <div class="sec-label"><i class="ti ti-clock"></i> Today · Monday, June 9</div>
+        <div class="timeline">
+          <div class="tl-row">
+            <div class="tl-time">7:00 AM</div>
+            <div class="tl-line"><div class="tl-dot" style="background:#7c3aed"></div></div>
+            <div class="tl-content">
+              <div class="tl-event purple">
+                <div class="tl-event-name">NCM 112 — Nursing Care Management</div>
+                <div class="tl-event-meta">
+                  <span><i class="ti ti-map-pin" style="font-size:11px"></i> Room 204, Nursing Bldg</span>
+                  <span><i class="ti ti-clock" style="font-size:11px"></i> 7:00 – 10:00 AM</span>
+                  <span class="source-tag st-silid" style="font-size:9px">Silid LMS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">12:00 PM</div>
+            <div class="tl-line"><div class="tl-dot" style="background:#7c3aed"></div></div>
+            <div class="tl-content">
+              <div class="tl-event purple">
+                <div class="tl-event-name">Pharmacology Lecture — Unit 4 Drug Classes</div>
+                <div class="tl-event-meta">
+                  <span><i class="ti ti-map-pin" style="font-size:11px"></i> Room 110, Sciences Bldg</span>
+                  <span><i class="ti ti-clock" style="font-size:11px"></i> 12:00 – 2:00 PM</span>
+                  <span class="source-tag st-gc" style="font-size:9px">Google Classroom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">2:00 PM</div>
+            <div class="tl-line"><div class="tl-dot" style="background:#fb923c"></div></div>
+            <div class="tl-content">
+              <div class="tl-event orange">
+                <div class="tl-event-name">Hospital Duty — Ward 3 · Cebu City Medical Center</div>
+                <div class="tl-event-meta">
+                  <span><i class="ti ti-building-hospital" style="font-size:11px"></i> CCMC Ward 3</span>
+                  <span><i class="ti ti-clock" style="font-size:11px"></i> 2:00 – 7:00 PM</span>
+                  <span class="badge b-amber" style="font-size:9px;padding:2px 6px">5 hrs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">7:00 PM</div>
+            <div class="tl-line"><div class="tl-dot" style="background:rgba(255,255,255,.15)"></div></div>
+            <div class="tl-content">
+              <div class="tl-empty">Free time · Boarding house</div>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">8:00 PM</div>
+            <div class="tl-line"><div class="tl-dot" style="background:#f87171"></div></div>
+            <div class="tl-content">
+              <div class="tl-event red">
+                <div class="tl-event-name">⚠ Study window — Nursing Notes due 11:59 PM</div>
+                <div class="tl-event-meta">
+                  <span><i class="ti ti-alert-triangle" style="font-size:11px;color:#fca5a5"></i> 2 tasks overdue — act now</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">11:59 PM</div>
+            <div class="tl-line"><div class="tl-dot" style="background:#f87171"></div></div>
+            <div class="tl-content">
+              <div class="tl-event red">
+                <div class="tl-event-name">Deadline — Nursing Notes &amp; Concept Map</div>
+                <div class="tl-event-meta">
+                  <span class="badge b-red" style="font-size:9px;padding:2px 6px">Critical</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHEDULE SIDEBAR -->
+    <div class="sched-sidebar">
+      <!-- MINI CALENDAR -->
+      <div class="mini-cal">
+        <div class="mc-header">
+          <div class="mc-arrow">‹</div>
+          <div class="mc-month">June 2026</div>
+          <div class="mc-arrow">›</div>
+        </div>
+        <div class="mc-grid">
+          <div class="mc-dname">S</div><div class="mc-dname">M</div><div class="mc-dname">T</div>
+          <div class="mc-dname">W</div><div class="mc-dname">T</div><div class="mc-dname">F</div><div class="mc-dname">S</div>
+          <div class="mc-d"></div>
+          <div class="mc-d">2</div><div class="mc-d has-event">3</div><div class="mc-d has-event">4</div>
+          <div class="mc-d has-event">5</div><div class="mc-d has-event">6</div><div class="mc-d">7</div>
+          <div class="mc-d">8</div>
+          <div class="mc-d today has-event">9</div><div class="mc-d has-event">10</div>
+          <div class="mc-d has-event">11</div><div class="mc-d has-event">12</div>
+          <div class="mc-d has-event">13</div><div class="mc-d">14</div>
+          <div class="mc-d">15</div>
+          <div class="mc-d has-event">16</div><div class="mc-d has-event">17</div>
+          <div class="mc-d has-event">18</div><div class="mc-d has-event">19</div>
+          <div class="mc-d">20</div><div class="mc-d">21</div>
+          <div class="mc-d">22</div>
+          <div class="mc-d has-event">23</div><div class="mc-d">24</div>
+          <div class="mc-d">25</div><div class="mc-d">26</div><div class="mc-d">27</div><div class="mc-d">28</div>
+          <div class="mc-d">29</div><div class="mc-d">30</div>
+        </div>
+      </div>
+      <!-- UPCOMING DEADLINES -->
+      <div class="card card-p">
+        <div class="sec-label"><i class="ti ti-calendar-due"></i> Upcoming Deadlines</div>
+        <div class="upcoming-item">
+          <div class="up-date"><div class="up-day">Jun</div><div class="up-num">10</div></div>
+          <div class="up-info">
+            <div class="up-name">Reflection Paper — Duty Day 3</div>
+            <div class="up-sub">NCM 112 · 8:00 AM · Silid LMS</div>
+          </div>
+          <span class="badge b-amber" style="font-size:9px;align-self:center"><span class="dot"></span>Soon</span>
+        </div>
+        <div class="upcoming-item">
+          <div class="up-date"><div class="up-day">Jun</div><div class="up-num">11</div></div>
+          <div class="up-info">
+            <div class="up-name">Drug Study — Amoxicillin &amp; Metformin</div>
+            <div class="up-sub">Pharmacology · 11:59 PM · Google Classroom</div>
+          </div>
+          <span class="badge b-amber" style="font-size:9px;align-self:center"><span class="dot"></span>Soon</span>
+        </div>
+        <div class="upcoming-item">
+          <div class="up-date"><div class="up-day">Jun</div><div class="up-num">12</div></div>
+          <div class="up-info">
+            <div class="up-name">Community Diagnosis Survey</div>
+            <div class="up-sub">Community Health · 5:00 PM · Silid LMS</div>
+          </div>
+          <span class="badge b-amber" style="font-size:9px;align-self:center"><span class="dot"></span>Soon</span>
+        </div>
+        <div class="upcoming-item">
+          <div class="up-date"><div class="up-day">Jun</div><div class="up-num">15</div></div>
+          <div class="up-info">
+            <div class="up-name">Case Study — Hypertensive Patient</div>
+            <div class="up-sub">NCM 112 · 11:59 PM · Silid LMS</div>
+          </div>
+          <span class="badge b-gray" style="font-size:9px;align-self:center">Later</span>
+        </div>
+      </div>
+      <!-- LEGEND -->
+      <div class="card card-p">
+        <div class="sec-label"><i class="ti ti-palette"></i> Legend</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.6)">
+            <div style="width:10px;height:10px;border-radius:3px;background:#7c3aed;flex-shrink:0"></div> Class / Lecture
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.6)">
+            <div style="width:10px;height:10px;border-radius:3px;background:#fb923c;flex-shrink:0"></div> Hospital Duty
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.6)">
+            <div style="width:10px;height:10px;border-radius:3px;background:#f87171;flex-shrink:0"></div> Deadline / Critical
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.6)">
+            <div style="width:10px;height:10px;border-radius:3px;background:#60a5fa;flex-shrink:0"></div> Exam / Quiz
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     SUBJECTS PAGE
+     ================================================================ -->
+<div class="page" id="page-subj">
+  <div class="page-header">
+    <div class="ph-left">
+      <h2>Subjects</h2>
+      <p>4 enrolled subjects · Synced from Silid LMS &amp; Google Classroom</p>
+    </div>
+    <div class="ph-right">
+      <div class="btn"><i class="ti ti-layout-grid" style="font-size:13px"></i> Grid</div>
+      <div class="btn"><i class="ti ti-list" style="font-size:13px"></i> List</div>
+    </div>
+  </div>
+
+  <!-- SUBJECT CARDS GRID -->
+  <div class="subjects-grid">
+    <div class="subj-card c1">
+      <div class="subj-icon si-purple"><i class="ti ti-stethoscope"></i></div>
+      <div class="subj-name">NCM 112</div>
+      <div class="subj-code">Nursing Care Management · 3rd Year</div>
+      <div class="subj-prog-bar"><div class="subj-prog-fill" style="width:78%;background:#7c3aed"></div></div>
+      <div class="subj-prog-row"><span>Overall progress</span><span style="color:#a78bfa;font-weight:500">78%</span></div>
+      <div class="subj-stats-row">
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#fbbf24">2</div><div class="subj-stat-l">Pending</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#4ade80">3</div><div class="subj-stat-l">Submitted</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#60a5fa">5</div><div class="subj-stat-l">Modules</div></div>
+      </div>
+      <div class="subj-source-row">
+        <span class="source-tag st-silid">Silid LMS</span>
+      </div>
+    </div>
+    <div class="subj-card c2">
+      <div class="subj-icon si-orange"><i class="ti ti-pill"></i></div>
+      <div class="subj-name">Pharmacology</div>
+      <div class="subj-code">Drug Study &amp; Medication Management · 3rd Year</div>
+      <div class="subj-prog-bar"><div class="subj-prog-fill" style="width:52%;background:#fb923c"></div></div>
+      <div class="subj-prog-row"><span>Overall progress</span><span style="color:#fb923c;font-weight:500">52%</span></div>
+      <div class="subj-stats-row">
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#f87171">1</div><div class="subj-stat-l">Overdue</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#4ade80">1</div><div class="subj-stat-l">Submitted</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#60a5fa">4</div><div class="subj-stat-l">Modules</div></div>
+      </div>
+      <div class="subj-source-row">
+        <span class="source-tag st-gc">Google Classroom</span>
+      </div>
+    </div>
+    <div class="subj-card c3">
+      <div class="subj-icon si-green"><i class="ti ti-dna"></i></div>
+      <div class="subj-name">Anatomy &amp; Physiology</div>
+      <div class="subj-code">Human Body Systems · 3rd Year</div>
+      <div class="subj-prog-bar"><div class="subj-prog-fill" style="width:91%;background:#4ade80"></div></div>
+      <div class="subj-prog-row"><span>Overall progress</span><span style="color:#4ade80;font-weight:500">91%</span></div>
+      <div class="subj-stats-row">
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#a78bfa">1</div><div class="subj-stat-l">Pending</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#4ade80">2</div><div class="subj-stat-l">Submitted</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#60a5fa">6</div><div class="subj-stat-l">Modules</div></div>
+      </div>
+      <div class="subj-source-row">
+        <span class="source-tag st-gc">Google Classroom</span>
+      </div>
+    </div>
+    <div class="subj-card c4" style="grid-column:span 1">
+      <div class="subj-icon si-red"><i class="ti ti-users"></i></div>
+      <div class="subj-name">Community Health Nursing</div>
+      <div class="subj-code">Public Health &amp; Community Diagnosis · 3rd Year</div>
+      <div class="subj-prog-bar"><div class="subj-prog-fill" style="width:34%;background:#f87171"></div></div>
+      <div class="subj-prog-row"><span>Overall progress</span><span style="color:#f87171;font-weight:500">34%</span></div>
+      <div class="subj-stats-row">
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#fbbf24">1</div><div class="subj-stat-l">Pending</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#4ade80">1</div><div class="subj-stat-l">Submitted</div></div>
+        <div class="subj-stat"><div class="subj-stat-n" style="color:#60a5fa">3</div><div class="subj-stat-l">Modules</div></div>
+      </div>
+      <div class="subj-source-row">
+        <span class="source-tag st-silid">Silid LMS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="subjects-bottom">
+    <!-- MODULES LIST -->
+    <div class="card card-p">
+      <div class="sec-label"><i class="ti ti-layout-list"></i> NCM 112 · Module Tracker</div>
+      <div class="module-list">
+        <div class="module-item">
+          <div class="mod-icon si-green"><i class="ti ti-circle-check" style="font-size:15px"></i></div>
+          <div class="mod-info">
+            <div class="mod-name">Module 1 — Fundamentals of Nursing</div>
+            <div class="mod-sub">8 lessons · Completed Jun 2</div>
+          </div>
+          <span class="mod-status ms-done"><i class="ti ti-check" style="font-size:12px"></i></span>
+        </div>
+        <div class="module-item">
+          <div class="mod-icon si-green"><i class="ti ti-circle-check" style="font-size:15px"></i></div>
+          <div class="mod-info">
+            <div class="mod-name">Module 2 — Vital Signs &amp; Assessment</div>
+            <div class="mod-sub">6 lessons · Completed Jun 5</div>
+          </div>
+          <span class="mod-status ms-done"><i class="ti ti-check" style="font-size:12px"></i></span>
+        </div>
+        <div class="module-item" style="border:1px solid rgba(167,139,250,.3);background:rgba(167,139,250,.07)">
+          <div class="mod-icon si-purple"><i class="ti ti-loader" style="font-size:15px"></i></div>
+          <div class="mod-info">
+            <div class="mod-name">Module 3 — Wound Care &amp; Dressings</div>
+            <div class="mod-sub">5 lessons · In progress — 60% done</div>
+          </div>
+          <span class="mod-status ms-current"><i class="ti ti-arrow-right" style="font-size:12px"></i></span>
+        </div>
+        <div class="module-item" style="opacity:.5">
+          <div class="mod-icon" style="background:rgba(255,255,255,.05);color:rgba(255,255,255,.2)"><i class="ti ti-lock" style="font-size:15px"></i></div>
+          <div class="mod-info">
+            <div class="mod-name">Module 4 — Perioperative Nursing</div>
+            <div class="mod-sub">Locked · Complete Module 3 first</div>
+          </div>
+          <span class="mod-status ms-locked"><i class="ti ti-lock" style="font-size:12px"></i></span>
+        </div>
+        <div class="module-item" style="opacity:.5">
+          <div class="mod-icon" style="background:rgba(255,255,255,.05);color:rgba(255,255,255,.2)"><i class="ti ti-lock" style="font-size:15px"></i></div>
+          <div class="mod-info">
+            <div class="mod-name">Module 5 — Maternal &amp; Child Health</div>
+            <div class="mod-sub">Locked · Not yet available</div>
+          </div>
+          <span class="mod-status ms-locked"><i class="ti ti-lock" style="font-size:12px"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE BREAKDOWN -->
+    <div class="card card-p">
+      <div class="sec-label"><i class="ti ti-chart-bar"></i> Performance Breakdown</div>
+      <div class="performance-wrap">
+        <div class="perf-item">
+          <div class="perf-label">NCM 112</div>
+          <div class="perf-bar-bg"><div class="perf-bar-fill" style="width:78%;background:#7c3aed"></div></div>
+          <div class="perf-pct" style="color:#a78bfa">78%</div>
+        </div>
+        <div class="perf-item">
+          <div class="perf-label">Pharmacology</div>
+          <div class="perf-bar-bg"><div class="perf-bar-fill" style="width:52%;background:#fb923c"></div></div>
+          <div class="perf-pct" style="color:#fb923c">52%</div>
+        </div>
+        <div class="perf-item">
+          <div class="perf-label">Anatomy &amp; Physiology</div>
+          <div class="perf-bar-bg"><div class="perf-bar-fill" style="width:91%;background:#4ade80"></div></div>
+          <div class="perf-pct" style="color:#4ade80">91%</div>
+        </div>
+        <div class="perf-item">
+          <div class="perf-label">Community Health</div>
+          <div class="perf-bar-bg"><div class="perf-bar-fill" style="width:34%;background:#f87171"></div></div>
+          <div class="perf-pct" style="color:#f87171">34%</div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,.07);margin:4px 0"></div>
+        <div class="perf-item">
+          <div class="perf-label" style="font-weight:500;color:rgba(255,255,255,.7)">Overall GWA</div>
+          <div class="perf-bar-bg"><div class="perf-bar-fill" style="width:64%;background:linear-gradient(90deg,#7c3aed,#a78bfa)"></div></div>
+          <div class="perf-pct" style="color:#a78bfa;font-weight:500">64%</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;padding:10px 12px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.2);border-radius:10px">
+        <div style="font-size:11px;font-weight:500;color:#fcd34d;margin-bottom:3px"><i class="ti ti-bulb" style="font-size:12px"></i> Focus recommendation</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.5)">Community Health is at 34% — 2 weeks behind pace. Prioritize after tonight's overdue tasks.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+const pages={tasks:'page-tasks',sched:'page-sched',subj:'page-subj'};
+const tabs={tasks:'stab-tasks',sched:'stab-sched',subj:'stab-subj'};
+const nls={tasks:'nl-tasks',sched:'nl-sched',subj:'nl-subj'};
+
+function switchTab(tab){
+  const root = document.querySelector('.dashboard-screen');
+  if(!root) return;
+
+  root.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('on');
+    page.style.display = 'none';
+  });
+
+  const targetPage = root.querySelector('#page-' + tab);
+  if(targetPage){
+    targetPage.classList.add('on');
+    targetPage.style.display = 'block';
+  }
+
+  root.querySelectorAll('.nl').forEach(nav => nav.classList.remove('active'));
+  const targetNav = root.querySelector('#nl-' + tab);
+  if(targetNav) targetNav.classList.add('active');
+
+  const search = root.querySelector('#dashboardSearch');
+  if(search){
+    search.value = '';
+    if(typeof dashboardSearchFilter === 'function') dashboardSearchFilter('');
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function filterTasks(status, el){
+  document.querySelectorAll('.dashboard-screen .filter-item').forEach(f=>f.classList.remove('on'));
+  el.classList.add('on');
+  const rows=document.querySelectorAll('.dashboard-screen .task-row');
+  const groups=document.querySelectorAll('.dashboard-screen .task-group-label');
+  rows.forEach(r=>{
+    r.style.display=(status==='all'||r.dataset.status===status)?'flex':'none';
+  });
+  groups.forEach(g=>{
+    const grp=g.dataset.group;
+    const visible=Array.from(document.querySelectorAll('.task-row[data-status="'+grp+'"]')).some(r=>r.style.display!=='none');
+    g.style.display=(status==='all'||visible)?'flex':'none';
+  });
+}
+
+switchTab('tasks');
+</script>
+
+    </div>
+  </div>
+
+
+<script>
+function toggleDashMenu(id){
+  const current = document.getElementById(id);
+  if(!current) return;
+
+  document.querySelectorAll('.dashboard-screen .dash-dropdown').forEach(menu => {
+    if(menu !== current) menu.classList.remove('open');
+  });
+
+  current.classList.toggle('open');
+}
+
+document.addEventListener('click', function(event){
+  const insideDashMenu = event.target.closest('.dash-dropdown');
+  const clickedBell = event.target.closest('.bell');
+  const clickedAvatar = event.target.closest('.avatar');
+
+  if(!insideDashMenu && !clickedBell && !clickedAvatar){
+    document.querySelectorAll('.dashboard-screen .dash-dropdown').forEach(menu => {
+      menu.classList.remove('open');
+    });
+  }
+});
+</script>
+
+
+<script>
+function dashboardSearchFilter(query){
+  const root = document.querySelector('.dashboard-screen');
+  if(!root) return;
+
+  const q = (query || '').trim().toLowerCase();
+  const activePage = root.querySelector('.page.on');
+  if(!activePage) return;
+
+  const searchableSelectors = [
+    '.priority-row',
+    '.schedule-home-row',
+    '.feed-item',
+    '.task-row',
+    '.subj-card',
+    '.module-item',
+    '.upcoming-item',
+    '.tl-event',
+    '.progress-item'
+  ];
+
+  searchableSelectors.forEach(selector => {
+    activePage.querySelectorAll(selector).forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = (!q || text.includes(q)) ? '' : 'none';
+    });
+  });
+
+  // Hide group labels in Tasks when their following visible tasks are all hidden
+  activePage.querySelectorAll('.task-group-label').forEach(label => {
+    let next = label.nextElementSibling;
+    let hasVisible = false;
+
+    while(next && !next.classList.contains('task-group-label')){
+      if(next.classList && next.classList.contains('task-row') && next.style.display !== 'none'){
+        hasVisible = true;
+        break;
+      }
+      next = next.nextElementSibling;
+    }
+
+    label.style.display = (!q || hasVisible) ? '' : 'none';
+  });
+
+  let notice = activePage.querySelector('.dashboard-no-results');
+  if(!notice){
+    notice = document.createElement('div');
+    notice.className = 'dashboard-no-results';
+    notice.textContent = 'No matching results found.';
+    activePage.appendChild(notice);
+  }
+
+  const anyVisible = searchableSelectors.some(selector =>
+    Array.from(activePage.querySelectorAll(selector)).some(item => item.style.display !== 'none')
+  );
+
+  notice.style.display = q && !anyVisible ? 'block' : 'none';
+}
+</script>
+
+
+<script>
+function showDashboardHome(){
+  setTimeout(function(){
+    const root = document.querySelector('.dashboard-screen');
+    if(!root) return;
+
+    root.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('on');
+      page.style.display = 'none';
+    });
+
+    const home = root.querySelector('#page-home');
+    if(home){
+      home.classList.add('on');
+      home.style.display = 'block';
+    }
+
+    root.querySelectorAll('.nl').forEach(nav => nav.classList.remove('active'));
+    const homeNav = root.querySelector('#nl-home');
+    if(homeNav) homeNav.classList.add('active');
+
+    const search = root.querySelector('#dashboardSearch');
+    if(search) search.value = '';
+  }, 30);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  const dashboardRadio = document.getElementById('state-dashboard');
+
+  if(dashboardRadio){
+    dashboardRadio.addEventListener('change', function(){
+      if(this.checked) showDashboardHome();
+    });
+  }
+
+  document.querySelectorAll('label[for="state-dashboard"]').forEach(label => {
+    label.addEventListener('click', showDashboardHome);
+  });
+
+  // safety check: if dashboard is visible but all content pages are hidden, restore home
+  setInterval(function(){
+    const dashboardRadio = document.getElementById('state-dashboard');
+    const root = document.querySelector('.dashboard-screen');
+    if(!dashboardRadio || !dashboardRadio.checked || !root) return;
+
+    const visiblePage = Array.from(root.querySelectorAll('.page')).find(page => {
+      return page.classList.contains('on') && page.offsetParent !== null;
+    });
+
+    if(!visiblePage) showDashboardHome();
+  }, 500);
+});
+</script>
+
+
+<script>
+/* ===== LOOP+ WORKING BUTTONS - FINAL ===== */
+
+function showPage(pageId) {
+  const radio = document.getElementById(pageId);
+  if (radio) {
+    radio.checked = true;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
+function goToLandingSection(sectionId) {
+  const landing = document.getElementById("state-landing");
+  if (landing) landing.checked = true;
+
+  setTimeout(() => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }, 100);
+}
+
+function showDashboardHome() {
+  showPage("state-dashboard");
+
+  setTimeout(() => {
+    document.querySelectorAll(".dashboard-screen .page").forEach(page => {
+      page.classList.remove("on");
+      page.style.display = "none";
+    });
+
+    const homePage = document.getElementById("page-home");
+    if (homePage) {
+      homePage.classList.add("on");
+      homePage.style.display = "block";
+    }
+
+    document.querySelectorAll(".dashboard-screen .nl").forEach(nav => {
+      nav.classList.remove("active");
+    });
+
+    const homeNav = document.getElementById("nl-home");
+    if (homeNav) homeNav.classList.add("active");
+
+    const search = document.getElementById("dashboardSearch");
+    if (search) search.value = "";
+  }, 100);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  /* Landing nav section links */
+  document.querySelectorAll('a[href="#features"]').forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      goToLandingSection("features");
+    });
+  });
+
+  document.querySelectorAll('a[href="#how-it-works"]').forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      goToLandingSection("how-it-works");
+    });
+  });
+
+  document.querySelectorAll('a[href="#integrations"]').forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      goToLandingSection("integrations");
+    });
+  });
+
+  document.querySelectorAll('a[href="#about"]').forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      goToLandingSection("about");
+    });
+  });
+
+  /* See how it works */
+  document.querySelectorAll(".btn-secondary").forEach(btn => {
+    btn.addEventListener("click", () => {
+      goToLandingSection("how-it-works");
+    });
+  });
+
+  /* Learn more */
+  document.querySelectorAll(".btn-cta-secondary").forEach(btn => {
+    btn.addEventListener("click", () => {
+      goToLandingSection("features");
+    });
+  });
+
+  /* Login buttons */
+  document.querySelectorAll(".btn-login, .btn-login-nav").forEach(btn => {
+    btn.addEventListener("click", () => {
+      showPage("state-login");
+    });
+  });
+
+  /* Start / Get Started buttons */
+  document.querySelectorAll(".btn-primary, .btn-getstarted-nav, .btn-cta-primary").forEach(btn => {
+    btn.addEventListener("click", () => {
+      showPage("state-signup-1");
+    });
+  });
+
+  /* Home buttons and logo back to landing */
+  document.querySelectorAll(".nav-home-link, label[for='state-landing']").forEach(btn => {
+    btn.addEventListener("click", () => {
+      showPage("state-landing");
+    });
+  });
+
+  /* Complete setup */
+  document.querySelectorAll(".btn-complete").forEach(btn => {
+    btn.addEventListener("click", () => {
+      showDashboardHome();
+    });
+  });
+
+  /* Sign in */
+  document.querySelectorAll(".login-signin").forEach(btn => {
+    btn.addEventListener("click", () => {
+      showDashboardHome();
+    });
+  });
+});
+</script>
+
+</body>
+</html>
